@@ -1,5 +1,6 @@
 app:
-  telegram-token: unset
+  telegram-token: ${BOT_TOKEN}
+  tinkoff-token: ${TINKOFF_TOKEN}
 
 spring:
   application:
