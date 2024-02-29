@@ -11,12 +11,12 @@ public class Converter {
         if (value == null) {
             return null;
         }
-        return mapUnitsAndNanos(value.getUnits(), value.getNano());
+       return mapUnitsAndNanos(value.getUnits(), value.getNano());
     }
     private static  BigDecimal mapUnitsAndNanos(long units, int nanos) {
         if (units == 0 && nanos == 0) {
             return BigDecimal.ZERO;
         }
-        return BigDecimal.valueOf(units).add(BigDecimal.valueOf(nanos, 9));
+        return BigDecimal.valueOf(units + nanos/ 1e9);
     }
 }
